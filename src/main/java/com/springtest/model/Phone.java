@@ -3,33 +3,25 @@ package com.springtest.model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Phone {
 
     @Autowired
-    Nokia nokia;
-    @Autowired
-    //@Qualifier("apple")
-    Configurations config;
-/*    public Phone(Nokia nokia){
-        this.nokia = nokia;
-    }*/
-
-    public Configurations getConfig() {
-        return config;
-    }
-
-    public void setConfig(Configurations config) {
-        this.config = config;
-    }
-
+    @Qualifier("apple")
+    Configurations conf;
     public void getPrice(){
-      //System.out.println("Price of mobile phone is"+nokia.getPrice());
-      config.getSpeedOfPhone();
+      System.out.println("Price of mobile phone is");
+      conf.getSpeedOfPhone();
+    }
+    public void getDefault(){
+        System.out.println("Calling default function");
+    }
 
-  }
-
+    public void display(){
+        System.out.println("Calling display methos");
+    }
 
 }

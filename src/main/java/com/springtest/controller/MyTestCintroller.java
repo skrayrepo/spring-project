@@ -2,6 +2,7 @@ package com.springtest.controller;
 
 import com.springtest.SpringConfig;
 import com.springtest.model.Phone;
+import com.springtest.model.vehicle.MyVehicle;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -13,5 +14,6 @@ public class MyTestCintroller {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         Phone phone = context.getBean(Phone.class);
         phone.getPrice();
+
     }
 }

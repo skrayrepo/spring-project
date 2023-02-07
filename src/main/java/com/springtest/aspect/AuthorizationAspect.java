@@ -9,17 +9,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class AuthorizationAspect {
 
-    @Pointcut("within(com..*)")
+/*    @Pointcut("within(com..*)")
     public void authenticationPointcut(){
         //System.out.println("authentication");
-    }
+    }*/
     /*@Pointcut("within(com..*)")
     public void authorizationPointcut(){
         System.out.println("authorization");
     }*/
-
+/*
     @Before(value="authenticationPointcut()")
     public void authenticationAthorization(){
         System.out.println("Validation done here");
-    }
+    }*/
 }
